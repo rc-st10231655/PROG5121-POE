@@ -6,7 +6,7 @@ package com.mycompany.prog5121_poe;
 
 /**
  *
- * @author Malope
+ * @author ST10231655
  */
 public class PROG5121_POE {
 
