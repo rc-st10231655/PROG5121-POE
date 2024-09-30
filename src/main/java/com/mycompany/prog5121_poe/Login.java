@@ -89,6 +89,11 @@ public class Login {
             return registrationMessage.toString();
         }
 
+        // Assign user user name as entered username
+        this.userUsername = enteredUsername;
+        // Assign user password as entered password
+        this.userPassword = enteredPassword;
+
         // Return successful registration message
         return "User registered successfully";
     }
