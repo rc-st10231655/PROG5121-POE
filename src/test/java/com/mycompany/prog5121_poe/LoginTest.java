@@ -24,4 +24,12 @@ public class LoginTest {
         assertEquals("Welcome John, Doe it is great to see you again.", loginStatus);
     }
 
+    // Test username is incorrectly formatted
+    @Test
+    public void testUsernameIncorrectlyFormatted() {
+        Login user = new Login("John", "Doe");
+        String result = user.registerUser("kyle!!!!!!!", "Valid@Password1");
+        assertEquals("Username is not correctly formatted, please ensure that your username contains an underscore and is no more than 5 characters in length.\n", result);
+    }
+
 }
