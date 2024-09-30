@@ -73,5 +73,11 @@ public class LoginTest {
         assertTrue(user.checkUserName("kyl_1"));
     }
 
+    // Test username incorrectly formatted
+    @Test
+    public void testUsernameFormattedIncorrectly() {
+        Login user = new Login("John", "Doe");
+        assertFalse(user.checkUserName("kyle!!!!!!!"));
+    }
 
 }
