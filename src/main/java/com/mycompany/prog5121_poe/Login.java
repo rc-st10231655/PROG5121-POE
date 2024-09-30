@@ -57,4 +57,18 @@ public class Login {
         }
         return false;
     }
+
+    // Method to register user and display message
+    public String registerUser(String username, String password) {
+        if (!checkUserName(username)) {
+            // Return username incorrectly formatted message
+            return "Username is not correctly formatted, please ensure that your username contains an underscore and is no more than 5 characters in length";
+        }
+        if (!checkPasswordComplexity(password)) {
+            // Return password incorrectly formatted message
+            return "Password is not correctly formatted, please ensure that the password contains at least 8 characters, a capital letter, a number and a special character.";
+        }
+        // Return user registered successfully message
+        return "User registered successfully";
+    }
 }
