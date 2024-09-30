@@ -32,4 +32,12 @@ public class LoginTest {
         assertEquals("Username is not correctly formatted, please ensure that your username contains an underscore and is no more than 5 characters in length.\n", result);
     }
 
+    // Test password meets the complexity requirements
+    @Test
+    public void testPasswordMeetsComplexity() {
+        Login user = new Login("John", "Doe");
+        String result = user.registerUser("kyl_1", "Ch&&sec@ke99!");
+        assertEquals("User registered successfully", result);
+    }
+
 }
