@@ -57,4 +57,13 @@ public class LoginTest {
         assertEquals("Welcome John, Doe it is great to see you again.", user.returnLoginStatus("kyl_1", "Valid@Password1"));
     }
 
+    // Test failed login
+    @Test
+    public void testFailedLogin() {
+        Login user = new Login("John", "Doe");
+        user.registerUser("kyl_1", "Valid@Password1");
+        assertFalse(user.loginUser("kyl_1", "WrongPassword"));
+        assertEquals("Username or password incorrect, please try again", user.returnLoginStatus("kyl_1", "WrongPassword"));
+    }
+
 }
