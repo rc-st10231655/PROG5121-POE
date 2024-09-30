@@ -58,7 +58,7 @@ public class Login {
         return false;
     }
 
-    // Method to register user and display message
+    // Method to register user and return message
     public String registerUser(String username, String password) {
         if (!checkUserName(username)) {
             // Return username incorrectly formatted message
@@ -74,6 +74,18 @@ public class Login {
 
     // Method to login user
     public boolean loginUser(String username, String password) {
+        // Check if entered username and password are same as username and password
         return username.equals(this.username) && password.equals(this.password);
+    }
+
+    // Method to return login status message
+    public String returnLoginStatus(String username, String password) {
+        if (loginUser(username, password)) {
+            // Return successful login message
+            return "Welcome " + firstName + ", " + lastName + " it is great to see you again.";
+        } else {
+            // Return failed login message
+            return "Username or password incorrect, please try again";
+        }
     }
 }
