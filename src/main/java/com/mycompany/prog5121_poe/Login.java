@@ -14,4 +14,17 @@ public class Login {
     private String lastName; // Last name string
     private String username; // Username string
     private String password; // Password string
+
+    public Login() {
+    }
+
+    // Method to check username
+    public boolean checkUserName(String username) {
+        // Check if username has underscore and 5 11characters
+        if (username.contains("_") && username.length() <= 5) {
+            this.username = username; // Assign username for login
+            return true;
+        }
+        return false;
+    }
 }
