@@ -13,10 +13,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  *
- * @author Malope
+ * @author ST10231655
  */
 public class LoginTest {
-    
+
     public LoginTest() {
     }
 
@@ -35,19 +35,19 @@ public class LoginTest {
     @org.junit.jupiter.api.AfterEach
     public void tearDown() throws Exception {
     }
-    
+
     @BeforeAll
     public static void setUpClass() {
     }
-    
+
     @AfterAll
     public static void tearDownClass() {
     }
-    
+
     @BeforeEach
     public void setUp() {
     }
-    
+
     @AfterEach
     public void tearDown() {
     }
@@ -129,5 +129,5 @@ public class LoginTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
-    
+
 }
