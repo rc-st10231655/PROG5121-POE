@@ -47,4 +47,14 @@ public class LoginTest {
         String result = user.registerUser("kyl_1", "password");
         assertEquals("Password is not correctly formatted, please ensure that the password contains at least 8 characters, a capital letter, a number, and a special character.", result);
     }
+
+    // Test successful login
+    @Test
+    public void testSuccessfulLogin() {
+        Login user = new Login("John", "Doe");
+        user.registerUser("kyl_1", "Valid@Password1");
+        assertTrue(user.loginUser("kyl_1", "Valid@Password1"));
+        assertEquals("Welcome John, Doe it is great to see you again.", user.returnLoginStatus("kyl_1", "Valid@Password1"));
+    }
+
 }
