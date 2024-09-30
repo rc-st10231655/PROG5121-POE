@@ -66,4 +66,12 @@ public class LoginTest {
         assertEquals("Username or password incorrect, please try again", user.returnLoginStatus("kyl_1", "WrongPassword"));
     }
 
+    // Test username correctly formatted
+    @Test
+    public void testUsernameFormattedCorrectly() {
+        Login user = new Login("John", "Doe");
+        assertTrue(user.checkUserName("kyl_1"));
+    }
+
+
 }
