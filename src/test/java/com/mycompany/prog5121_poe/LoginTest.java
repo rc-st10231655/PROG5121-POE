@@ -40,4 +40,11 @@ public class LoginTest {
         assertEquals("User registered successfully", result);
     }
 
+    // Test password does not meet the complexity requirements
+    @Test
+    public void testPasswordDoesNotMeetComplexity() {
+        Login user = new Login("John", "Doe");
+        String result = user.registerUser("kyl_1", "password");
+        assertEquals("Password is not correctly formatted, please ensure that the password contains at least 8 characters, a capital letter, a number, and a special character.", result);
+    }
 }
