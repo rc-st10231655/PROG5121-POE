@@ -71,4 +71,9 @@ public class Login {
         // Return user registered successfully message
         return "User registered successfully";
     }
+
+    // Method to login user
+    public boolean loginUser(String username, String password) {
+        return username.equals(this.username) && password.equals(this.password);
+    }
 }
