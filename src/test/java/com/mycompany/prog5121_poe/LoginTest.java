@@ -80,11 +80,18 @@ public class LoginTest {
         assertFalse(user.checkUserName("kyle!!!!!!!"));
     }
 
-    // Test password meets complexity requirements (assertTrue)
+    // Test password meets complexity requirements
     @Test
     public void testPasswordComplexityMet() {
         Login user = new Login("John", "Doe");
         assertTrue(user.checkPasswordComplexity("Ch&&sec@ke99!"));
+    }
+
+    // Test password does not meet complexity requirements (assertFalse)
+    @Test
+    public void testPasswordComplexityNotMet() {
+        Login user = new Login("John", "Doe");
+        assertFalse(user.checkPasswordComplexity("password"));
     }
 
 }
