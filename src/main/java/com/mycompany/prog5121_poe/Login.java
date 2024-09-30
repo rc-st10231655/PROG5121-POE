@@ -18,7 +18,10 @@ public class Login {
     private String username; // Username string
     private String password; // Password string
 
-    public Login() {
+    // Constructor for login
+    public Login(String firstName, String lastName) {
+        this.firstName = firstName; // Assign firstname for login
+        this.lastName = lastName; // Assign las
     }
 
     // Method to check username
